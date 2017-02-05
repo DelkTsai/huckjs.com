@@ -16,6 +16,10 @@
     "show": "pm2 show huck",
     "watch": "pm2 start server.js --name huck"
   },
+  "engines": {
+    "node": "7.4.0",
+    "npm": "4.0.5"
+  },
   "dependencies": {
     "@huck/browser": "^0.1.1",
     "@huck/core": "^0.1.2",
@@ -33,6 +37,7 @@
     "livereload": "^0.6.0",
     "lodash": "^4.17.4",
     "multer": "^1.3.0",
+    "node-sass": "^4.5.0",
     "node-sass-middleware": "^0.11.0",
     "nodemon": "^1.11.0",
     "npm-run-all": "^4.0.1",
