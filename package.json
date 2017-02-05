@@ -9,8 +9,9 @@
     "build": "rollup -c",
     "rollup": "rollup -c --watch",
     "restart": "pm2 restart huck",
-    "start": "pm2 start server.js --name huck",
+    "start": "forever -m 5 --minUptime 1000 --spinSleepTime 500 server.js",
     "knit": "npm-run-all --parallel rollup watch",
+    "postinstall": "yarn build",
     "stop": "pm2 stop huck",
     "show": "pm2 show huck",
     "watch": "pm2 start server.js --name huck"
@@ -33,6 +34,7 @@
     "lodash": "^4.17.4",
     "multer": "^1.3.0",
     "node-sass-middleware": "^0.11.0",
+    "nodemon": "^1.11.0",
     "npm-run-all": "^4.0.1",
     "pm2": "^2.3.0",
     "postcss": "^5.2.11",
