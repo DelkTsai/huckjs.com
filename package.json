@@ -1,9 +1,9 @@
 {
-  "name": "huck",
+  "name": "huckjs.com",
   "version": "0.1.0",
   "description": "JS Kickstarter",
   "main": "server.js",
-  "repository": "https://github.com/jesseweed/huck",
+  "repository": "https://github.com/huckjs/huckjs.com",
   "license": "MIT",
   "scripts": {
     "build": "rollup -c",
@@ -17,7 +17,7 @@
   },
   "dependencies": {
     "@huck/browser": "^0.1.1",
-    "@huck/core": "^0.1.1",
+    "@huck/core": "^0.1.2",
     "babel-plugin-external-helpers": "^6.22.0",
     "babel-preset-es2015": "^6.22.0",
     "babel-preset-es2015-rollup": "^3.0.0",

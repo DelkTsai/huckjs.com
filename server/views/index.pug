@@ -19,12 +19,11 @@ html(lang='en')
     script(src='js/app.min.js')
 
   body
-    nav
-      a(href='#', [navigate]='/sample') Sample link
-      br
-      a(href='#', [navigate]='/test') Test
 
-    router-outlet
-      home-component
-      test-component
-      error-component
+    .content
+      h1([navigate]='/test') Huck
+
+      router-outlet
+        home-component
+        test-component
+        error-component

@@ -7,8 +7,6 @@ class DefaultComponent {
 
   constructor() {
 
-    this.greeting = 'Home component loaded';
-
     Component(this, {
       css: styles,
       template: template,

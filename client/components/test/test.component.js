@@ -7,7 +7,7 @@ class TestComponent {
 
   constructor() {
 
-    this.greeting = 'Test component loaded';
+    this.message = 'Coming soon.';
 
     Component(this, {
       css: styles,
