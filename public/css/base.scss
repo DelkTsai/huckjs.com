@@ -1,0 +1,21 @@
+$font-size: 12px;
+
+body, html {
+  font-family: Helvetica;
+  font-size: $font-size;
+}
+
+h1 {
+  font-weight: 100;
+}
+
+router-outlet {
+  display: none;
+}
+
+nav {
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  text-align: right;
+}
