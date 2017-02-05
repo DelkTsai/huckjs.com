@@ -11,7 +11,7 @@
     "restart": "pm2 restart huck",
     "start": "./node_modules/.bin/forever -m 5 --minUptime 1000 --spinSleepTime 500 server.js",
     "knit": "npm-run-all --parallel rollup watch",
-    "postinstall": "npm run build",
+    "postinstall": "rollup -c",
     "stop": "pm2 stop huck",
     "show": "pm2 show huck",
     "watch": "pm2 start server.js --name huck"
