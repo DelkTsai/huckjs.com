@@ -19,8 +19,8 @@ import sass from 'rollup-plugin-sass';
 let ENV = JSON.stringify(process.env.NODE_ENV || 'development');
 
 export default {
-  entry: './client/app.js',
-  dest: '_dist/js/app.min.js',
+  entry: './client/huck.js',
+  dest: '_dist/js/huck.min.js',
   format: 'iife',
   moduleName: config.shared.name,
   plugins: [

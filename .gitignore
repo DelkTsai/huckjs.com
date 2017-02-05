@@ -7,7 +7,6 @@
 *.sublime-project
 *.sublime-workspace
 
-_dist/
 bower_components/
 dump.rdb
 node_modules/
