@@ -8,7 +8,7 @@ import { Router } from '@huck/browser';
 import { BindingComponent } from './components/binding/binding.component';
 import { DefaultComponent } from './components/default/default.component';
 import { DefaultErrorComponent } from './components/error/default/default.component';
-import { TestComponent } from './components/test/test.component';
+import { SoonComponent } from './components/soon/soon.component';
 
 let App = new Huck({
   // name: 'Huck',
@@ -22,7 +22,7 @@ App.bootstrap({
     BindingComponent,
     DefaultComponent,
     DefaultErrorComponent,
-    TestComponent
+    SoonComponent
   ]
 });
 
@@ -32,9 +32,9 @@ App.onReady(() => {
 
 App.router = new Router([
   {
-    component: 'TestComponent',
-    name: 'test-component',
-    path: '/test'
+    component: 'SoonComponent',
+    name: 'soon-component',
+    path: '/soon'
   },
   {
     component: 'BindingComponent',

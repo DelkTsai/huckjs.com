@@ -1,9 +1,9 @@
-import template from './test.component.pug';
-import styles from './test.component.scss';
+import template from './soon.component.pug';
+import styles from './soon.component.scss';
 
 import { Component } from '@huck/core';
 
-class TestComponent {
+class SoonComponent {
 
   constructor() {
 
@@ -12,7 +12,7 @@ class TestComponent {
     Component(this, {
       css: styles,
       template: template,
-      selector: 'test-component'
+      selector: 'soon-component'
     });
 
   }
@@ -23,4 +23,4 @@ class TestComponent {
 
 }
 
-export { TestComponent };
+export { SoonComponent };
