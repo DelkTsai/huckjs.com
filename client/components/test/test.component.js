@@ -18,7 +18,7 @@ class TestComponent {
   }
 
   onInit() {
-    this.logger.log(`${this.name} initialized: ${this.loadtime}`);
+    // this.logger.log(`${this.name} initialized: ${this.loadtime}`);
   }
 
 }

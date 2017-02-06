@@ -3,18 +3,20 @@ import config from './shared/config.js';
 
 
 // PLUGINS
-// import babel from 'rollup-plugin-babel';
+import babel from 'rollup-plugin-babel';
 import commonjs from 'rollup-plugin-commonjs';
 // import cssnext from 'postcss-cssnext';
 import eslint from 'rollup-plugin-eslint';
 import json from 'rollup-plugin-json';
 import resolve from 'rollup-plugin-node-resolve';
 import replace from 'rollup-plugin-replace';
-import uglify from 'rollup-plugin-uglify';
+// import uglify from 'rollup-plugin-uglify';
 import stylusCssModules from 'rollup-plugin-stylus-css-modules';
 import pug from 'rollup-plugin-pug';
 // import postcss from 'postcss';
 import sass from 'rollup-plugin-sass';
+// import { minify } from 'uglify-js';
+const Visualizer = require('rollup-plugin-visualizer');
 
 let ENV = JSON.stringify(process.env.NODE_ENV || 'development');
 
@@ -33,10 +35,10 @@ export default {
       ]
     }),
     resolve({
+      browser: true,
       jsnext: true,
       main: true,
-      browser: true,
-      preferBuiltins: false
+      module: true
     }),
     sass(),
     pug(),
@@ -49,10 +51,12 @@ export default {
     stylusCssModules({
       sourceMap: true
     }),
-    // babel({
-    //   exclude: ['node_modules/**', '*.pug']
-    // }),
-    (ENV === 'production' && uglify())
+    babel({
+      exclude: ['node_modules/**', '*.pug']
+    }),
+    Visualizer()
+    // uglify({}, minify),
+    // (ENV === 'production' && uglify())
   ],
-  sourceMap: 'inline'
+  sourceMap: true
 };

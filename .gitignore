@@ -13,3 +13,5 @@ dump.rdb
 node_modules/
 public/*.css
 typings/
+
+stats.html
