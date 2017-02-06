@@ -33,6 +33,7 @@
     "eslint-plugin-promise": "^3.4.0",
     "eslint-plugin-standard": "^2.0.1",
     "express": "^4.14.1",
+    "forever": "^0.15.3",
     "ip": "^1.1.4",
     "livereload": "^0.6.0",
     "lodash": "^4.17.4",
