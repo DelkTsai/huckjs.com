@@ -3,7 +3,7 @@ import styles from './default.component.scss';
 
 import { Component } from '@huck/core';
 
-class DefaultErrorComponent {
+class ErrorComponent {
 
   constructor() {
 
@@ -24,4 +24,4 @@ class DefaultErrorComponent {
 
 }
 
-export { DefaultErrorComponent };
+export { ErrorComponent };

@@ -17,9 +17,7 @@ class SoonComponent {
 
   }
 
-  onInit() {
-    // this.logger.log(`${this.name} initialized: ${this.loadtime}`);
-  }
+  // onInit() { this.logger.log(`${this.name} initialized: ${this.loadtime}`); }
 
 }
 

@@ -8,8 +8,7 @@ class BindingComponent {
 
   constructor() {
 
-    this.title = 'Data Binding';
-
+    // ADD A PET
     this.pets = [
       {
         breed: 'cat',
@@ -17,6 +16,7 @@ class BindingComponent {
       }
     ];
 
+    // INITIALIZE COMPONENT
     Component(this, {
       css: styles,
       template: template,
@@ -25,31 +25,25 @@ class BindingComponent {
 
   }
 
-  onInit() {
+  // CALLS WHEN COMPONENT IS INITIALIZED (BUT NOT NECESSARILY ACTIVE)
+  // onInit() {}
 
+  // CALL WHEN COMPONENT IS LOADED (I.E. Route is activated)
+  onLoad() {
+
+    // SAVE A REFERENCE TO TH SHADOW ROOT OF OUR CONTAINER
     this.shadow = Dom.el(this.selector).shadowRoot;
 
+    // ADD MORE PETS OVER TIME
+    setTimeout(() => this.add(this.pets, { name: 'Jerry', breed: 'mouse' }), 2000);
+    setTimeout(() => this.add(this.pets, { name: 'Tweety', breed: 'bird' }), 4000);
+
+    // SET TITLE
+    this.set('title', 'Data Binding');
+
     // LISTEN FOR CHANGES
-    this.onChange((what) => {
-      if (typeof what.value === 'string' && typeof what.previous === 'string') {
-        this.logger.info(`${what.key} value has changed from "${what.previous}" to " ${what.value}".`);
-      } else {
-        this.logger.info(`${what.key} has changed: `, what.value);
-      }
-    });
+    // this.onChange((what) => {});
 
-    // ADD A NEW PET
-    setTimeout(() => this.add('pets', { name: 'Jerry', breed: 'mouse' }), 2000);
-    setTimeout(() => this.add('pets', { name: 'Tweety', breed: 'bird' }), 4000);
-    setTimeout(() => this.add('pets', { name: 'Droopy', breed: 'dog' }), 6000);
-
-  }
-
-  render(el, html) {
-    el.innerHTML = `
-      <style>${styles}</style>
-      ${template(this)}
-    `;
   }
 
 }

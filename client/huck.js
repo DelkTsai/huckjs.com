@@ -1,56 +1,48 @@
-// LIBS
-
-// TUPACCA
+// HUCK
 import { Huck } from '@huck/core';
-import { Router } from '@huck/browser';
+// import { Router } from '@huck/browser';
 
 // COMPONENTS
 import { BindingComponent } from './components/binding/binding.component';
 import { DefaultComponent } from './components/default/default.component';
-import { DefaultErrorComponent } from './components/error/default/default.component';
+import { ErrorComponent } from './components/error/default.component';
 import { SoonComponent } from './components/soon/soon.component';
 
+import { AppRoutes } from './router';
+
+// CREATE NEW APP
 let App = new Huck({
-  // name: 'Huck',
-  // livereload: true,
+  name: 'Huck',
+  livereload: true,
   logging: true,
   production: false
 });
 
+// ADD OUR COMPONENTS
 App.bootstrap({
   components: [
     BindingComponent,
     DefaultComponent,
-    DefaultErrorComponent,
+    ErrorComponent,
     SoonComponent
   ]
 });
 
+// WHEN THE APP IS READY
 App.onReady(() => {
   App.logger.log(`${App.name} loaded: ${App.loadtime}`);
 });
 
-App.router = new Router([
-  {
-    component: 'SoonComponent',
-    name: 'soon-component',
-    path: '/soon'
-  },
-  {
-    component: 'BindingComponent',
-    name: 'binding-component',
-    path: '/binding'
-  },
-  {
-    component: 'DefaultErrorComponent',
-    name: 'error-component'
-  }
-]);
 
-App.router.add({
-  component: 'DefaultComponent',
-  name: 'home',
-  path: '/'
-});
+// SETUP ROUTER
+App.router = AppRoutes;
 
-export {App as Huck};
+// ADD ANOTHER ROUTE
+// App.router.add({
+//   component: 'DefaultComponent',
+//   name: 'home',
+//   path: '/'
+// });
+
+// DO THIS IF WE WANT TO MAKE OUR APP ACCESSIBLE TO THE WINDOW
+export { App as Huck };

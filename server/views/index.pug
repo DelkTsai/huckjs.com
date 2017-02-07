@@ -12,8 +12,7 @@ html(lang='en')
     meta(http-equiv='Expires' content='-1')
 
     //- STYLES
-    link(rel='stylesheet', href='/css/base.css')
-    link(rel='stylesheet', href='/css/app.css')
+    link(rel='stylesheet', href='huck.css')
 
     //- SCRIPTS
     script(src='js/huck.min.js')
@@ -21,11 +20,9 @@ html(lang='en')
   body
 
     .content
-      h1([navigate]='/soon') Huck
 
       router-outlet
         home-component
         binding-component
         soon-component
-
         error-component

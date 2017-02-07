@@ -21,7 +21,7 @@ if (process.env.NODE_ENV === 'production') {
 // STYLUS
 app.use(require('node-sass-middleware')({
   debug: true,
-  src:      './public',
+  src:      './client/shared/css',
   dest:     './_dist'
 }));
 

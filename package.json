@@ -60,6 +60,7 @@
     "rollup-plugin-pug": "^0.1.2",
     "rollup-plugin-replace": "^1.1.1",
     "rollup-plugin-sass": "^0.4.8",
+    "rollup-plugin-scss": "^0.2.0",
     "rollup-plugin-stylus-css-modules": "^1.2.3",
     "rollup-plugin-uglify": "^1.0.1",
     "rollup-plugin-visualizer": "^0.2.0",
