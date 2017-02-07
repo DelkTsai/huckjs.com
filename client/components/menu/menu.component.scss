@@ -1,0 +1,22 @@
+:host {
+  @import '../../shared/css/imports';
+
+  nav {
+    background-color: rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    a {
+      cursor: pointer;
+      display: inline-block;
+      padding: 20px;
+
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.1);
+      }
+    }
+  }
+
+}

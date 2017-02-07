@@ -31,6 +31,8 @@ class BindingComponent {
   // CALL WHEN COMPONENT IS LOADED (I.E. Route is activated)
   onLoad() {
 
+    console.log('onLoad: binding component');
+
     // SAVE A REFERENCE TO TH SHADOW ROOT OF OUR CONTAINER
     this.shadow = Dom.el(this.selector).shadowRoot;
 

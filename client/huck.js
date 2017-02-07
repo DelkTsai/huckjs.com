@@ -6,6 +6,7 @@ import { Huck } from '@huck/core';
 import { BindingComponent } from './components/binding/binding.component';
 import { DefaultComponent } from './components/default/default.component';
 import { ErrorComponent } from './components/error/default.component';
+import { MenuComponent } from './components/menu/menu.component';
 import { SoonComponent } from './components/soon/soon.component';
 
 import { AppRoutes } from './router';
@@ -24,6 +25,7 @@ App.bootstrap({
     BindingComponent,
     DefaultComponent,
     ErrorComponent,
+    MenuComponent,
     SoonComponent
   ]
 });
